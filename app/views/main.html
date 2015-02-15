@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>OX Game</h2>
+    <form name="game_settings" class="game_settings">
+        <input type="checkbox" ng-model="firstPlayer" ng-true-value="'CPU is'" ng-false-value="'You are'">{{firstPlayer}} First
+        <br />
+        <input type="number" ng-model="grid" min="3">rows and columns
+        <br />
+        <input type="checkbox" ng-model="select_player">
+        <input type="submit" ng-click="startGame()" ng-hide="select_player" value="start game">
+        <input type="submit" ng-click="reset()" ng-show="select_player" value="reset">
+    </form>
+    <span ng-repeat="cell in board">
+  <button ng-click="caputuredPiece(cell)">{{cell}}</button>
+  <br ng-show="$index % {{grid}} === {{grid}} - 1">
+  </span>
+  <span>クリックしたボタンのnumberに入っている数字{{getNumber}}</span>
+    <div ng-model="winner">
+        <span ng-show="winner">Win</span>
+    </div>
+</div>
