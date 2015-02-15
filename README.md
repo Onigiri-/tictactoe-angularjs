@@ -1,2 +1,2 @@
 # tictactoe-angularjs
-AngularjsでOXゲーム
+AngularjsでOXゲームを作ってみる
